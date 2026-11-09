@@ -1,0 +1,293 @@
+{
+  "seed": 5710,
+  "total_cases": 104,
+  "failure_count": 26,
+  "failures": [
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 1,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 4,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 7,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 13,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 14,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 15,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 19,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 24,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 25,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 28,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 35,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 39,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 44,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 49,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 53,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 61,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 63,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 65,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 68,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 78,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 80,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 82,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 86,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 89,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 93,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    },
+    {
+      "method": "getSingleDict4MultiDocs",
+      "seed": 5710,
+      "case_id": 96,
+      "input": [
+        []
+      ],
+      "exception": "IndexError",
+      "message": "list index out of range",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 29, in main\n    parser.getSingleDict4MultiDocs(documents)\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/parser.py\", line 379, in getSingleDict4MultiDocs\n    dic = dic[0]\n          ~~~^^^\nIndexError: list index out of range\n"
+    }
+  ]
+}
