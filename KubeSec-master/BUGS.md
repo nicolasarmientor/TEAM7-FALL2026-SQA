@@ -8,11 +8,16 @@
 - Expected behavior: Handle an empty list doc or reject it with a validation error
 - Status: Not fixed
 
+Manual evidence: evidence/empty-list-crash.txt
+
+## Fuzzing summary
+
 Seed: 5710
-Cases run: 104
-Cases crashed: 26
+Methods tested: 2/10
+Cases run: 204
+Cases failed: 26
+
+- getSingleDict4MultiDocs: 104 cases
+- getValuesRecursively: 100 cases
 
 Report: evidence/fuzz-results.json
-Manual terminal output: evidence/empty-list-crash.txt
-
-Fuzzing coverage: 1/10

@@ -38,9 +38,44 @@ def main():
                 "traceback": traceback.format_exc()
             })
 
+    value_case_count = 100
+
+    for case_id in range(value_case_count):
+        leaves = [
+            rng.choice([None, True, False, 0, 42, "", "example"])
+            for _ in range(rng.randint(0, 20))
+        ]
+
+        nested = []
+        for value in leaves:
+            shape = rng.randrange(3)
+            if shape == 0:
+                nested.append(value)
+            elif shape == 1:
+                nested.append({"value": value})
+            else:
+                nested.append([{"inner": [value]}])
+
+        try:
+            actual = list(parser.getValuesRecursively(nested))
+            if actual != leaves:
+                raise AssertionError(f"Expected {leaves!r}, got {actual!r}")
+        except Exception as error:
+            failures.append({
+                "method": "getValuesRecursively",
+                "seed": seed,
+                "case_id": case_id,
+                "input": nested,
+                "exception": type(error).__name__,
+                "message": str(error),
+                "traceback": traceback.format_exc()
+            })
+
+    total_cases = len(cases) + value_case_count
+    
     report = {
         "seed": seed,
-        "total_cases": len(cases),
+        "total_cases": total_cases,
         "failure_count": len(failures),
         "failures": failures,
     }
@@ -51,8 +86,9 @@ def main():
         encoding="utf-8"
     )
 
-    print(f"Cases executed: {len(cases)}")
-    print(f"Crashing cases: {len(failures)}")
+    print("Methods tested: 2/10")
+    print(f"Cases executed: {total_cases}")
+    print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")
 
 
