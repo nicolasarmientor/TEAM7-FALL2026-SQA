@@ -221,6 +221,42 @@ def main():
                     "traceback": traceback.format_exc()
                 })
 
+    multi_case_count = 100
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_path = Path(temp_dir) / "multi-case.yaml"
+
+        for case_id in range(multi_case_count):
+            expected = []
+            documents = []
+
+            for index in range(rng.randint(1, 5)):
+                number = rng.randint(-1000, 1000)
+                name = f"example_{index}"
+
+                expected.append({"name": name, "number": number})
+                documents.append(f"name: {name}\nnumber: {number}\n")
+
+            content = "---\n".join(documents)
+            file_path.write_text(content, encoding="utf-8")
+
+            try:
+                actual = parser.loadMultiYAML(str(file_path))
+                if actual != expected:
+                    raise AssertionError(f"Expected {expected!r}, got {actual!r}")
+            except Exception as error:
+                failures.append({
+                    "method": "loadMultiYAML",
+                    "seed": seed,
+                    "case_id": case_id,
+                    "input": content,
+                    "expected": expected,
+                    "exception": type(error).__name__,
+                    "message": str(error),
+                    "traceback": traceback.format_exc()
+                })
+
+
     total_cases = (
         len(cases) + 
         value_case_count + 
@@ -228,7 +264,8 @@ def main():
         target_case_count +
         miner_case_count +
         read_case_count +
-        parse_case_count     
+        parse_case_count +
+        multi_case_count     
     )
     
     report = {
@@ -244,7 +281,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("Methods tested: 7/10")
+    print("Methods tested: 8/10")
     print(f"Cases executed: {total_cases}")
     print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")
