@@ -188,13 +188,47 @@ def main():
                     "traceback": traceback.format_exc()
                 })
 
+    parse_case_count = 100
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_path = Path(temp_dir) / "parse-case.yaml"
+
+        for case_id in range(parse_case_count):
+            number = rng.randint(-1000, 1000)
+
+            if case_id % 2 == 0:
+                content = f"name: example_{number}\nitems: [{number}]\n"
+                expected = True
+            else:
+                content = f"items: [{number}\n"
+                expected = False
+
+            file_path.write_text(content, encoding="utf-8")
+
+            try:
+                actual = parser.checkParseError(str(file_path))
+                if actual is not expected:
+                    raise AssertionError(f"Expected {expected!r}, got {actual!r}")
+            except Exception as error:
+                failures.append({
+                    "method": "checkParseError",
+                    "seed": seed,
+                    "case_id": case_id,
+                    "input": content,
+                    "expected": expected,
+                    "exception": type(error).__name__,
+                    "message": str(error),
+                    "traceback": traceback.format_exc()
+                })
+
     total_cases = (
         len(cases) + 
         value_case_count + 
         key_case_count +
         target_case_count +
         miner_case_count +
-        read_case_count     
+        read_case_count +
+        parse_case_count     
     )
     
     report = {
@@ -210,7 +244,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("Methods tested: 6/10")
+    print("Methods tested: 7/10")
     print(f"Cases executed: {total_cases}")
     print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")
