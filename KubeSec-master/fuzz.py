@@ -290,6 +290,48 @@ def main():
                 "traceback": traceback.format_exc()
             })
 
+    helm_case_count = 100
+
+    for case_id in range(helm_case_count):
+        folder = f"project_{rng.randint(0, 1000)}"
+        marker = rng.choice([
+            "helm", "chart", "services", "k8s-ingress", 
+            "deploy", "configuration"
+        ])
+
+        combination = case_id % 4
+
+        match combination:
+            case 0:
+                path = f"{folder}/{marker}/values.yaml"
+                expected = True
+            case 1:
+                path = f"{folder}/{marker}/settings.yaml"
+                expected = False
+            case 2:
+                path = f"{folder}/manifests/values.yaml"
+                expected = False
+            case _:
+                path = f"{folder}/manifests/settings.yaml"
+                expected = False
+
+        try:
+            actual = parser.checkIfValidHelm(path)
+            if actual is not expected:
+                raise AssertionError(f"Expected {expected!r}, got {actual!r}")
+        except Exception as error:
+            failures.append({
+                "method": "checkIfValidHelm",
+                "seed": seed,
+                "case_id": case_id,
+                "input": path,
+                "expected": expected,
+                "exception": type(error).__name__,
+                "message": str(error),
+                "traceback": traceback.format_exc()
+            })
+
+
     total_cases = (
         len(cases) + 
         value_case_count + 
@@ -299,7 +341,8 @@ def main():
         read_case_count +
         parse_case_count +
         multi_case_count +
-        path_case_count    
+        path_case_count +
+        helm_case_count    
     )
     
     report = {
@@ -315,7 +358,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("Methods tested: 9/10")
+    print("Methods tested: 10/10")
     print(f"Cases executed: {total_cases}")
     print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")
