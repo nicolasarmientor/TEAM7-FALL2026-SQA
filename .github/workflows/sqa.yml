@@ -1,0 +1,58 @@
+name: SQA checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-fuzz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    defaults:
+      run:
+        working-directory: KubeSec-master
+        shell: bash
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install parser dependency
+        run: python -m pip install "ruamel.yaml==0.17.21"
+
+      - name: Run parsing tests
+        run: |
+          mkdir -p evidence
+          set -o pipefail
+          python TEST_PARSING.py 2>&1 | tee evidence/parsing-tests.txt
+
+      - name: Run fuzzing and forensic logging
+        if: ${{ !cancelled() }}
+        run: |
+          rm -f evidence/forensics.log
+          set -o pipefail
+          python fuzz.py 2>&1 | tee evidence/fuzz-output.txt
+
+      - name: Upload execution evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: sqa-evidence
+          path: |
+            KubeSec-master/evidence/parsing-tests.txt
+            KubeSec-master/evidence/fuzz-output.txt
+            KubeSec-master/evidence/fuzz-results.json
+            KubeSec-master/evidence/forensics.log
+          if-no-files-found: warn
