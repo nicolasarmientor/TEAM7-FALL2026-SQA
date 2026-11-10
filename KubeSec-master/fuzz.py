@@ -71,7 +71,35 @@ def main():
                 "traceback": traceback.format_exc()
             })
 
-    total_cases = len(cases) + value_case_count
+    key_case_count = 100
+
+    for case_id in range(key_case_count):
+        data = {}
+        expected = []
+
+        for index in range(rng.randint(2, 8)):
+            key = f"branch_{index}"
+            data[key] = {"leaf": rng.randint(-100, 100)}
+            expected.extend([(key, 0), ("leaf", 1)])
+
+        actual = []
+
+        try:
+            parser.getKeyRecursively(data, actual)
+            if actual != expected:
+                raise AssertionError(f"Expected {expected!r}, got {actual!r}")
+        except Exception as error:
+            failures.append({
+                "method": "getKeyRecursively",
+                "seed": seed,
+                "case_id": case_id,
+                "input": data,
+                "exception": type(error).__name__,
+                "message": str(error),
+                "traceback": traceback.format_exc()
+            })
+
+    total_cases = len(cases) + value_case_count + key_case_count
     
     report = {
         "seed": seed,
@@ -86,7 +114,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("Methods tested: 2/10")
+    print("Methods tested: 3/10")
     print(f"Cases executed: {total_cases}")
     print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")
