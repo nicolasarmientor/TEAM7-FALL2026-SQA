@@ -33,14 +33,17 @@ Automated evidence: evidence/fuzz-results.json
 
 ## Fuzzing summary
 
-Seed: 5710
-Methods tested: 4/10
-Cases run: 404
-Cases failed: 226
+- Seed: 5710
+- Methods tested: 5/10
+- Cases run: 504
+- Cases failed: 226
 
-- getSingleDict4MultiDocs: 104 cases
-- getValuesRecursively: 100 cases
-- getKeyRecursively: 100 cases
-- getValsFromKey: 100 cases
+|Method|Cases|Failures|
+|---|---|---|
+|getSingleDict4MultiDocs|104|26|
+|getValuesRecursively|100|0|
+|getKeyRecursively|100|100|
+|getValsFromKey|100|100|
+|keyMiner|100|0|
 
 Report: evidence/fuzz-results.json

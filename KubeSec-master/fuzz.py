@@ -125,11 +125,46 @@ def main():
                 "traceback": traceback.format_exc()
             })
 
+    miner_case_count = 100
+
+    for case_id in range(miner_case_count):
+        target = f"needle_{case_id}"
+        branch = f"branch_{rng.randint(0, 9)}"
+        position = rng.randint(0, 5)
+
+        items = [None] * position
+        items.append({"leaf": target})
+        data = {branch: items}
+
+        if rng.choice([True, False]):
+            search = target
+            expected = [branch, str(position), "leaf", target]
+        else:
+            search = f"missing_{case_id}"
+            expected = None
+
+        try:
+            actual = parser.keyMiner(data, search)
+            if actual != expected:
+                raise AssertionError(f"Expected {expected!r}, got {actual!r}")
+        except Exception as error:
+            failures.append({
+                "method": "keyMiner",
+                "seed": seed,
+                "case_id": case_id,
+                "input": data,
+                "search": search,
+                "exception": type(error).__name__,
+                "message": str(error),
+                "traceback": traceback.format_exc()
+            })
+
     total_cases = (
         len(cases) + 
         value_case_count + 
         key_case_count +
-        target_case_count       
+        target_case_count +
+        miner_case_count     
     )
     
     report = {
@@ -145,7 +180,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("Methods tested: 4/10")
+    print("Methods tested: 5/10")
     print(f"Cases executed: {total_cases}")
     print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")
