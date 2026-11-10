@@ -14,13 +14,15 @@ import pathlib as pl
 import re
 import subprocess
 import os
+# Add extra import
+from sqa_logging import forensic_log, forensic_generator_log
 
 #update basepath
 base_path = r" "
 
 key_jsonpath_mapping = {}
 
-    
+@forensic_log
 def checkIfWeirdYAML(yaml_script):
     '''
     to filter invalid YAMLs such as ./github/workflows/ 
@@ -30,7 +32,7 @@ def checkIfWeirdYAML(yaml_script):
         val = True 
     return val 
 
-
+@forensic_log
 def keyMiner(dic_, value):
   '''
   If you give a value, then this function gets the corresponding key, and the keys that call the key 
@@ -52,7 +54,7 @@ def keyMiner(dic_, value):
         return [str(i)] + p
 
 
-
+@forensic_log
 def getKeyRecursively(  dict_, list2hold,  depth_ = 0  ) :
     '''
     gives you ALL keys in a regular/nested dictionary 
@@ -74,6 +76,7 @@ def getKeyRecursively(  dict_, list2hold,  depth_ = 0  ) :
                 list2hold.append( (key_, depth_) ) 
     #print(list2hold)               
 
+@forensic_generator_log
 def getValuesRecursively(  dict_   ) :
     '''
     gives you ALL values in a regular/nested dictionary 
@@ -108,7 +111,7 @@ def checkIfValidK8SYaml(path2yaml):
     return val2ret
 
 
-
+@forensic_log
 def getValsFromKey(dict_, target, list_holder  ):
     '''
     If you give a key, then this function gets the corresponding values 
@@ -126,12 +129,14 @@ def getValsFromKey(dict_, target, list_holder  ):
                     for ls in value:
                         getValsFromKey(ls, target, list_holder)
 
+@forensic_log
 def checkIfValidHelm(path_script):
     val_ret = False 
     if ( (constants.HELM_KW in path_script) or (constants.CHART_KW in path_script) or (constants.SERVICE_KW in path_script) or (constants.INGRESS_KW in path_script)  or(constants.HELM_DEPLOY_KW in path_script) or (constants.CONFIG_KW in path_script) )  and (constants.VALUE_KW in path_script) :
         val_ret = True 
     return val_ret
 
+@forensic_log
 def readYAMLAsStr( path_script ):
     yaml_as_str = constants.YAML_SKIPPING_TEXT
     with open( path_script , constants.FILE_READ_FLAG) as file_:
@@ -139,6 +144,7 @@ def readYAMLAsStr( path_script ):
     return yaml_as_str
 
 # This function checks whether our parser throws an exception for reading the YAML file. 
+@forensic_log
 def checkParseError( path_script ):
     flag = True
     with open(path_script, constants.FILE_READ_FLAG) as yml:
@@ -157,6 +163,7 @@ def checkParseError( path_script ):
             print( constants.YAML_SKIPPING_TEXT  )
     return flag
 
+@forensic_log
 def loadMultiYAML( script_ ):
     dicts2ret = []  
     with open(script_, constants.FILE_READ_FLAG  ) as yml_content :
@@ -361,7 +368,7 @@ def show_line_for_paths(  filepath, key): #key_jsonpath_mapping is a global dict
     return lines
 
 
-
+@forensic_log
 def getSingleDict4MultiDocs( lis_dic ):
     dict2ret = {} 
     key_lis  = []

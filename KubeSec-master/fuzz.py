@@ -5,9 +5,13 @@ import random
 from pathlib import Path
 import parser
 import tempfile
+from sqa_logging import configure_logging
 
 # Main code
 def main():
+
+    configure_logging()
+
     seed = 5710
     rng = random.Random(seed)
     output = Path("evidence")
