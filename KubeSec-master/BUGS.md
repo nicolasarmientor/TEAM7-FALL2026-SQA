@@ -34,8 +34,8 @@ Automated evidence: evidence/fuzz-results.json
 ## Fuzzing summary
 
 - Seed: 5710
-- Methods tested: 8/10
-- Cases run: 804
+- Methods tested: 9/10
+- Cases run: 904
 - Cases failed: 226
 
 |Method|Cases|Failures|
@@ -48,5 +48,6 @@ Automated evidence: evidence/fuzz-results.json
 |readYAMLAsStr|100|0|
 |checkParseError|100|0|
 |loadMultiYAML|100|0|
+|checkIfWeirdYAML|100|0|
 
 Report: evidence/fuzz-results.json

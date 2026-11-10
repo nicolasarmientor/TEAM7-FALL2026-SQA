@@ -256,6 +256,39 @@ def main():
                     "traceback": traceback.format_exc()
                 })
 
+    path_case_count = 100
+
+    for case_id in range(path_case_count):
+        folder = f"project_{rng.randint(0, 1000)}"
+        file_name = f"config_{rng.randint(0, 1000)}.yaml"
+
+        if case_id % 2 == 0:
+            marker = rng.choice([
+                "github/workflows/",
+                ".github/",
+                ".travis.yml"
+            ])
+            path = f"{folder}/{marker}{file_name}"
+            expected = True
+        else:
+            path = f"{folder}/manifests/{file_name}"
+            expected = False
+
+        try:
+            actual = parser.checkIfWeirdYAML(path)
+            if actual is not expected:
+                raise AssertionError(f"Expected {expected!r}, got {actual!r}")
+        except Exception as error:
+            failures.append({
+                "method": "checkIfWeirdYAML",
+                "seed": seed,
+                "case_id": case_id,
+                "input": path,
+                "expected": expected,
+                "exception": type(error).__name__,
+                "message": str(error),
+                "traceback": traceback.format_exc()
+            })
 
     total_cases = (
         len(cases) + 
@@ -265,7 +298,8 @@ def main():
         miner_case_count +
         read_case_count +
         parse_case_count +
-        multi_case_count     
+        multi_case_count +
+        path_case_count    
     )
     
     report = {
@@ -281,7 +315,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("Methods tested: 8/10")
+    print("Methods tested: 9/10")
     print(f"Cases executed: {total_cases}")
     print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")
