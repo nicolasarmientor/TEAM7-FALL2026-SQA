@@ -4,6 +4,7 @@ import traceback
 import random
 from pathlib import Path
 import parser
+import tempfile
 
 # Main code
 def main():
@@ -159,12 +160,41 @@ def main():
                 "traceback": traceback.format_exc()
             })
 
+    read_case_count = 100
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_path = Path(temp_dir) / "generated.yaml"
+
+        for case_id in range(read_case_count):
+            content = "".join(
+                rng.choice(["a", " ", "\n", "\t", "é", "中", ":", "#"])
+                for _ in range(rng.randint(0, 200))
+            )
+
+            file_path.write_text(content, encoding="utf-8")
+
+            try:
+                actual = parser.readYAMLAsStr(str(file_path))
+                if actual != content:
+                    raise AssertionError(f"Expected {content!r}, got {actual!r}")
+            except Exception as error:
+                failures.append({
+                    "method": "readYAMLAsStr",
+                    "seed": seed,
+                    "case_id": case_id,
+                    "input": content,
+                    "exception": type(error).__name__,
+                    "message": str(error),
+                    "traceback": traceback.format_exc()
+                })
+
     total_cases = (
         len(cases) + 
         value_case_count + 
         key_case_count +
         target_case_count +
-        miner_case_count     
+        miner_case_count +
+        read_case_count     
     )
     
     report = {
@@ -180,7 +210,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("Methods tested: 5/10")
+    print("Methods tested: 6/10")
     print(f"Cases executed: {total_cases}")
     print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")
