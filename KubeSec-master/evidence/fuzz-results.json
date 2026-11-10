@@ -1,7 +1,7 @@
 {
   "seed": 5710,
-  "total_cases": 304,
-  "failure_count": 126,
+  "total_cases": 404,
+  "failure_count": 226,
   "failures": [
     {
       "method": "getSingleDict4MultiDocs",
@@ -2884,6 +2884,1406 @@
       "exception": "AssertionError",
       "message": "Expected [('branch_0', 0), ('leaf', 1), ('branch_1', 0), ('leaf', 1), ('branch_2', 0), ('leaf', 1)], got [('branch_0', 0), ('leaf', 1), ('branch_1', 1), ('leaf', 2), ('branch_2', 2), ('leaf', 3)]",
       "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 90, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [('branch_0', 0), ('leaf', 1), ('branch_1', 0), ('leaf', 1), ('branch_2', 0), ('leaf', 1)], got [('branch_0', 0), ('leaf', 1), ('branch_1', 1), ('leaf', 2), ('branch_2', 2), ('leaf', 3)]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 0,
+      "input": {
+        "name": {
+          "name": "example"
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 1,
+      "input": {
+        "value": {
+          "value": 42
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 42}, 42], got [{'value': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 42}, 42], got [{'value': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 2,
+      "input": {
+        "name": {
+          "name": 42
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 42}, 42], got [{'name': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 42}, 42], got [{'name': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 3,
+      "input": {
+        "name": {
+          "name": null
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': None}, None], got [{'name': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': None}, None], got [{'name': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 4,
+      "input": {
+        "target": {
+          "target": true
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': True}, True], got [{'target': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': True}, True], got [{'target': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 5,
+      "input": {
+        "target": {
+          "target": null
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': None}, None], got [{'target': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': None}, None], got [{'target': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 6,
+      "input": {
+        "value": {
+          "value": "example"
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 7,
+      "input": {
+        "value": {
+          "value": "example"
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 8,
+      "input": {
+        "value": {
+          "value": "example"
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 9,
+      "input": {
+        "name": {
+          "name": 0
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 0}, 0], got [{'name': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 0}, 0], got [{'name': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 10,
+      "input": {
+        "name": {
+          "name": 0
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 0}, 0], got [{'name': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 0}, 0], got [{'name': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 11,
+      "input": {
+        "name": {
+          "name": true
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': True}, True], got [{'name': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': True}, True], got [{'name': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 12,
+      "input": {
+        "name": {
+          "name": 42
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 42}, 42], got [{'name': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 42}, 42], got [{'name': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 13,
+      "input": {
+        "target": {
+          "target": 0
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 0}, 0], got [{'target': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 0}, 0], got [{'target': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 14,
+      "input": {
+        "name": {
+          "name": ""
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': ''}, ''], got [{'name': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': ''}, ''], got [{'name': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 15,
+      "input": {
+        "name": {
+          "name": true
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': True}, True], got [{'name': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': True}, True], got [{'name': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 16,
+      "input": {
+        "target": {
+          "target": ""
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': ''}, ''], got [{'target': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': ''}, ''], got [{'target': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 17,
+      "input": {
+        "value": {
+          "value": null
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': None}, None], got [{'value': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': None}, None], got [{'value': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 18,
+      "input": {
+        "value": {
+          "value": true
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': True}, True], got [{'value': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': True}, True], got [{'value': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 19,
+      "input": {
+        "value": {
+          "value": ""
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': ''}, ''], got [{'value': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': ''}, ''], got [{'value': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 20,
+      "input": {
+        "value": {
+          "value": ""
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': ''}, ''], got [{'value': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': ''}, ''], got [{'value': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 21,
+      "input": {
+        "name": {
+          "name": 0
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 0}, 0], got [{'name': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 0}, 0], got [{'name': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 22,
+      "input": {
+        "name": {
+          "name": 42
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 42}, 42], got [{'name': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 42}, 42], got [{'name': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 23,
+      "input": {
+        "target": {
+          "target": ""
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': ''}, ''], got [{'target': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': ''}, ''], got [{'target': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 24,
+      "input": {
+        "target": {
+          "target": null
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': None}, None], got [{'target': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': None}, None], got [{'target': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 25,
+      "input": {
+        "target": {
+          "target": null
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': None}, None], got [{'target': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': None}, None], got [{'target': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 26,
+      "input": {
+        "name": {
+          "name": null
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': None}, None], got [{'name': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': None}, None], got [{'name': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 27,
+      "input": {
+        "target": {
+          "target": 0
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 0}, 0], got [{'target': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 0}, 0], got [{'target': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 28,
+      "input": {
+        "value": {
+          "value": "example"
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 29,
+      "input": {
+        "value": {
+          "value": null
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': None}, None], got [{'value': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': None}, None], got [{'value': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 30,
+      "input": {
+        "target": {
+          "target": ""
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': ''}, ''], got [{'target': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': ''}, ''], got [{'target': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 31,
+      "input": {
+        "value": {
+          "value": true
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': True}, True], got [{'value': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': True}, True], got [{'value': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 32,
+      "input": {
+        "target": {
+          "target": true
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': True}, True], got [{'target': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': True}, True], got [{'target': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 33,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 34,
+      "input": {
+        "value": {
+          "value": "example"
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 35,
+      "input": {
+        "name": {
+          "name": "example"
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 36,
+      "input": {
+        "target": {
+          "target": null
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': None}, None], got [{'target': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': None}, None], got [{'target': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 37,
+      "input": {
+        "target": {
+          "target": 0
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 0}, 0], got [{'target': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 0}, 0], got [{'target': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 38,
+      "input": {
+        "value": {
+          "value": 0
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 0}, 0], got [{'value': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 0}, 0], got [{'value': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 39,
+      "input": {
+        "name": {
+          "name": "example"
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 40,
+      "input": {
+        "value": {
+          "value": true
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': True}, True], got [{'value': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': True}, True], got [{'value': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 41,
+      "input": {
+        "target": {
+          "target": true
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': True}, True], got [{'target': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': True}, True], got [{'target': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 42,
+      "input": {
+        "target": {
+          "target": true
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': True}, True], got [{'target': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': True}, True], got [{'target': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 43,
+      "input": {
+        "name": {
+          "name": ""
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': ''}, ''], got [{'name': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': ''}, ''], got [{'name': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 44,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 45,
+      "input": {
+        "value": {
+          "value": true
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': True}, True], got [{'value': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': True}, True], got [{'value': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 46,
+      "input": {
+        "value": {
+          "value": 42
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 42}, 42], got [{'value': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 42}, 42], got [{'value': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 47,
+      "input": {
+        "value": {
+          "value": true
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': True}, True], got [{'value': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': True}, True], got [{'value': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 48,
+      "input": {
+        "target": {
+          "target": true
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': True}, True], got [{'target': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': True}, True], got [{'target': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 49,
+      "input": {
+        "value": {
+          "value": 42
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 42}, 42], got [{'value': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 42}, 42], got [{'value': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 50,
+      "input": {
+        "value": {
+          "value": "example"
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 51,
+      "input": {
+        "value": {
+          "value": null
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': None}, None], got [{'value': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': None}, None], got [{'value': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 52,
+      "input": {
+        "name": {
+          "name": 42
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 42}, 42], got [{'name': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 42}, 42], got [{'name': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 53,
+      "input": {
+        "target": {
+          "target": ""
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': ''}, ''], got [{'target': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': ''}, ''], got [{'target': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 54,
+      "input": {
+        "target": {
+          "target": "example"
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 'example'}, 'example'], got [{'target': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 'example'}, 'example'], got [{'target': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 55,
+      "input": {
+        "target": {
+          "target": null
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': None}, None], got [{'target': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': None}, None], got [{'target': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 56,
+      "input": {
+        "name": {
+          "name": ""
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': ''}, ''], got [{'name': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': ''}, ''], got [{'name': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 57,
+      "input": {
+        "name": {
+          "name": 42
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 42}, 42], got [{'name': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 42}, 42], got [{'name': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 58,
+      "input": {
+        "value": {
+          "value": true
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': True}, True], got [{'value': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': True}, True], got [{'value': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 59,
+      "input": {
+        "value": {
+          "value": null
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': None}, None], got [{'value': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': None}, None], got [{'value': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 60,
+      "input": {
+        "value": {
+          "value": 0
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 0}, 0], got [{'value': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 0}, 0], got [{'value': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 61,
+      "input": {
+        "name": {
+          "name": 42
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 42}, 42], got [{'name': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 42}, 42], got [{'name': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 62,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 63,
+      "input": {
+        "name": {
+          "name": 0
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 0}, 0], got [{'name': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 0}, 0], got [{'name': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 64,
+      "input": {
+        "value": {
+          "value": 42
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 42}, 42], got [{'value': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 42}, 42], got [{'value': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 65,
+      "input": {
+        "name": {
+          "name": true
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': True}, True], got [{'name': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': True}, True], got [{'name': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 66,
+      "input": {
+        "name": {
+          "name": true
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': True}, True], got [{'name': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': True}, True], got [{'name': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 67,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 68,
+      "input": {
+        "value": {
+          "value": null
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': None}, None], got [{'value': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': None}, None], got [{'value': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 69,
+      "input": {
+        "target": {
+          "target": ""
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': ''}, ''], got [{'target': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': ''}, ''], got [{'target': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 70,
+      "input": {
+        "name": {
+          "name": ""
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': ''}, ''], got [{'name': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': ''}, ''], got [{'name': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 71,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 72,
+      "input": {
+        "target": {
+          "target": true
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': True}, True], got [{'target': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': True}, True], got [{'target': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 73,
+      "input": {
+        "value": {
+          "value": "example"
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 74,
+      "input": {
+        "name": {
+          "name": ""
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': ''}, ''], got [{'name': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': ''}, ''], got [{'name': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 75,
+      "input": {
+        "name": {
+          "name": 42
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 42}, 42], got [{'name': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 42}, 42], got [{'name': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 76,
+      "input": {
+        "target": {
+          "target": null
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': None}, None], got [{'target': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': None}, None], got [{'target': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 77,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 78,
+      "input": {
+        "target": {
+          "target": ""
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': ''}, ''], got [{'target': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': ''}, ''], got [{'target': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 79,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 80,
+      "input": {
+        "value": {
+          "value": true
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': True}, True], got [{'value': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': True}, True], got [{'value': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 81,
+      "input": {
+        "name": {
+          "name": true
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': True}, True], got [{'name': True}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': True}, True], got [{'name': True}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 82,
+      "input": {
+        "name": {
+          "name": ""
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': ''}, ''], got [{'name': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': ''}, ''], got [{'name': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 83,
+      "input": {
+        "target": {
+          "target": 0
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 0}, 0], got [{'target': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 0}, 0], got [{'target': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 84,
+      "input": {
+        "name": {
+          "name": 42
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 42}, 42], got [{'name': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 42}, 42], got [{'name': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 85,
+      "input": {
+        "target": {
+          "target": "example"
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 'example'}, 'example'], got [{'target': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 'example'}, 'example'], got [{'target': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 86,
+      "input": {
+        "value": {
+          "value": ""
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': ''}, ''], got [{'value': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': ''}, ''], got [{'value': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 87,
+      "input": {
+        "name": {
+          "name": 0
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 0}, 0], got [{'name': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 0}, 0], got [{'name': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 88,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 89,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 90,
+      "input": {
+        "name": {
+          "name": "example"
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 91,
+      "input": {
+        "name": {
+          "name": null
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': None}, None], got [{'name': None}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': None}, None], got [{'name': None}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 92,
+      "input": {
+        "value": {
+          "value": 0
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 0}, 0], got [{'value': 0}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 0}, 0], got [{'value': 0}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 93,
+      "input": {
+        "value": {
+          "value": "example"
+        }
+      },
+      "target": "value",
+      "exception": "AssertionError",
+      "message": "Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'value': 'example'}, 'example'], got [{'value': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 94,
+      "input": {
+        "target": {
+          "target": ""
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': ''}, ''], got [{'target': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': ''}, ''], got [{'target': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 95,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 96,
+      "input": {
+        "name": {
+          "name": "example"
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 'example'}, 'example'], got [{'name': 'example'}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 97,
+      "input": {
+        "target": {
+          "target": ""
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': ''}, ''], got [{'target': ''}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': ''}, ''], got [{'target': ''}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 98,
+      "input": {
+        "target": {
+          "target": 42
+        }
+      },
+      "target": "target",
+      "exception": "AssertionError",
+      "message": "Expected [{'target': 42}, 42], got [{'target': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'target': 42}, 42], got [{'target': 42}]\n"
+    },
+    {
+      "method": "getValsFromKey",
+      "seed": 5710,
+      "case_id": 99,
+      "input": {
+        "name": {
+          "name": 42
+        }
+      },
+      "target": "name",
+      "exception": "AssertionError",
+      "message": "Expected [{'name': 42}, 42], got [{'name': 42}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/nicolassarmiento/Desktop/TEAM7-FALL2026-SQA/KubeSec-master/fuzz.py\", line 115, in main\n    raise AssertionError(f\"Expected {expected!r}, got {actual!r}\")\nAssertionError: Expected [{'name': 42}, 42], got [{'name': 42}]\n"
     }
   ]
 }

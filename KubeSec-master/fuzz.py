@@ -99,7 +99,38 @@ def main():
                 "traceback": traceback.format_exc()
             })
 
-    total_cases = len(cases) + value_case_count + key_case_count
+    target_case_count = 100
+
+    for case_id in range(target_case_count):
+        target = rng.choice(["target", "name", "value"])
+        value = rng.choice([None, True, 0, 42, "", "example"])
+        inner = {target: value}
+        data = {target: inner}
+        expected = [inner, value]
+        actual = []
+
+        try:
+            parser.getValsFromKey(data, target, actual)
+            if actual != expected:
+                raise AssertionError(f"Expected {expected!r}, got {actual!r}")
+        except Exception as error:
+            failures.append({
+                "method": "getValsFromKey",
+                "seed": seed,
+                "case_id": case_id,
+                "input": data,
+                "target": target,
+                "exception": type(error).__name__,
+                "message": str(error),
+                "traceback": traceback.format_exc()
+            })
+
+    total_cases = (
+        len(cases) + 
+        value_case_count + 
+        key_case_count +
+        target_case_count       
+    )
     
     report = {
         "seed": seed,
@@ -114,7 +145,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("Methods tested: 3/10")
+    print("Methods tested: 4/10")
     print(f"Cases executed: {total_cases}")
     print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")

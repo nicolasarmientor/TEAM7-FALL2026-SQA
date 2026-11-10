@@ -20,15 +20,27 @@ Manual evidence: evidence/empty-list-crash.txt
 
 Automated evidence: evidence/fuzz-results.json
 
+## Bug-003: Nested keys skipped
+
+- Method: parser.getValsFromKey
+- Reproducing input: {"target": {"target": "inner"}}
+- Target key: "target"
+- Actual behavior: [{"target": "inner"}]
+- Expected behavior: [{"target": "inner"}, "inner"]
+- Status: Not fixed
+
+Automated evidence: evidence/fuzz-results.json
+
 ## Fuzzing summary
 
 Seed: 5710
-Methods tested: 3/10
-Cases run: 304
-Cases failed: 126
+Methods tested: 4/10
+Cases run: 404
+Cases failed: 226
 
 - getSingleDict4MultiDocs: 104 cases
 - getValuesRecursively: 100 cases
 - getKeyRecursively: 100 cases
+- getValsFromKey: 100 cases
 
 Report: evidence/fuzz-results.json
