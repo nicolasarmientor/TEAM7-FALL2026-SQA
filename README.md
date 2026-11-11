@@ -12,4 +12,12 @@
 | --- | --- |
 | Nicolas Sarmiento | nzs0102@auburn.edu |
 
+---
+## Current SQA results
 
+- Fuzzing: 10 methods, 1004 cases.
+- Findings: 226 failing cases failing under three documented bugs.
+- Forensic logging: 10 methods applied.
+- CI: Parsing tests, fuzzing, baseline validation, and evidence
+
+See [bug findings](KubeSec-master/BUGS.md)
