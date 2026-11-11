@@ -348,9 +348,24 @@ def main():
         path_case_count +
         helm_case_count    
     )
+
+    method_cases = {
+        "getSingleDict4MultiDocs": len(cases),
+        "getValuesRecursively": value_case_count,
+        "getKeyRecursively": key_case_count,
+        "getValsFromKey": target_case_count,
+        "keyMiner": miner_case_count,
+        "readYAMLAsStr": read_case_count,
+        "checkParseError": parse_case_count,
+        "loadMultiYAML": multi_case_count, 
+        "checkIfWeirdYAML": path_case_count, 
+        "checkIfValidHelm": helm_case_count
+    }
     
     report = {
         "seed": seed,
+        "methods_tested": len(method_cases),
+        "method_cases": method_cases,
         "total_cases": total_cases,
         "failure_count": len(failures),
         "failures": failures,
@@ -362,7 +377,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("Methods tested: 10/10")
+    print(f"Methods tested: {len(method_cases)}/10")
     print(f"Cases executed: {total_cases}")
     print(f"Failing cases: {len(failures)}")
     print(f"Report: {report_path}")

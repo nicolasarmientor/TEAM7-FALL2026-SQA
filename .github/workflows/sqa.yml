@@ -45,6 +45,11 @@ jobs:
           set -o pipefail
           python fuzz.py 2>&1 | tee evidence/fuzz-output.txt
 
+      - name: Check fuzzing results against baseline
+        run: |
+          set -o pipefail
+          python check_fuzz_results.py 2>&1 | tee evidence/fuzz-check.txt
+
       - name: Upload execution evidence
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
@@ -55,4 +60,5 @@ jobs:
             KubeSec-master/evidence/fuzz-output.txt
             KubeSec-master/evidence/fuzz-results.json
             KubeSec-master/evidence/forensics.log
+            KubeSec-master/evidence/fuzz-check.txt
           if-no-files-found: warn

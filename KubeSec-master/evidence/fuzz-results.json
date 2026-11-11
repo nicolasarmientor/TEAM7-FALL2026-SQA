@@ -1,5 +1,18 @@
 {
   "seed": 5710,
+  "methods_tested": 10,
+  "method_cases": {
+    "getSingleDict4MultiDocs": 104,
+    "getValuesRecursively": 100,
+    "getKeyRecursively": 100,
+    "getValsFromKey": 100,
+    "keyMiner": 100,
+    "readYAMLAsStr": 100,
+    "checkParseError": 100,
+    "loadMultiYAML": 100,
+    "checkIfWeirdYAML": 100,
+    "checkIfValidHelm": 100
+  },
   "total_cases": 1004,
   "failure_count": 226,
   "failures": [
